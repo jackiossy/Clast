@@ -22,9 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //设置根控制器
         
         let firstViewController = ViewController()
-        
-        firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
-        
+        let news_item = UITabBarItem.init(title: "news", image: UIImage.init(named: "news"), tag: 0)
+        firstViewController.tabBarItem = news_item
+
+
         let secondViewController = ViewController()
         
         secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBC.setViewControllers(tabBarList, animated: true)
         window?.rootViewController = tabBC
         window?.makeKeyAndVisible()
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle(rawValue: 1)!
         return true
     }
 

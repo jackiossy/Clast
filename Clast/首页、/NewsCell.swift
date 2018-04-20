@@ -39,7 +39,7 @@ class NewsCell: UITableViewCell {
     
     func add_all_views() {
         
-        title = UILabel.init(frame: CGRect.init(x: 5, y: 5, width: kScreenWidth - 155, height: 60))
+        title = UILabel.init(frame: CGRect.init(x: 10, y: 5, width: kScreenWidth - 155, height: 60))
         title?.numberOfLines = 0
         self .addSubview(title!)
         
@@ -47,7 +47,7 @@ class NewsCell: UITableViewCell {
         image_info?.backgroundColor = UIColor.red
         self .addSubview(image_info!)
         
-        author = UILabel.init(frame: CGRect.init(x: 5, y: 60, width: kScreenWidth - 120, height: 25))
+        author = UILabel.init(frame: CGRect.init(x: 10, y: 60, width: kScreenWidth - 120, height: 25))
         author?.font = UIFont.systemFont(ofSize: 10)
         author?.textColor = UIColor.lightGray
         self .addSubview(author!)

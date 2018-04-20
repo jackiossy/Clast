@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import Kingfisher
+import DGElasticPullToRefresh
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var news_all_data: NSArray?
     
@@ -42,12 +43,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         main_view = MainView()
         self.view = main_view
+        
+        // Initialize tableView
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        main_view?.news_table?.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            // Add your logic here
+            self?.loadAllData()
+            // Do not forget to call dg_stopLoading() at the end
+            self?.main_view?.news_table?.dg_stopLoading()
+            }, loadingView: loadingView)
+        main_view?.news_table?.dg_setPullToRefreshFillColor(UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0))
+        main_view?.news_table?.dg_setPullToRefreshBackgroundColor((main_view?.news_table?.backgroundColor!)!)
+        
         main_view?.news_table?.delegate = self as UITableViewDelegate
         main_view?.news_table?.dataSource = self as UITableViewDataSource
         main_view?.news_table?.register(NewsCell.self, forCellReuseIdentifier: "news_cell")
         loadAllData()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
     
     
     func loadAllData() {

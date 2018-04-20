@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.3.0)
+  - DGElasticPullToRefresh (1.1)
   - Kingfisher (4.7.0)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3.0)
+  - DGElasticPullToRefresh (~> 1.1)
   - Kingfisher (~> 4.7.0)
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - DGElasticPullToRefresh
     - Kingfisher
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  DGElasticPullToRefresh: 28f11a6026302a90f8ffebbc6e24748e584dddd3
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 3ff60c331601aa7e3f4cefd984eaeed5aa5195f9
+PODFILE CHECKSUM: 6e18b5ee55e9717751575e2cb1e2c3779c04a371
 
 COCOAPODS: 1.5.0

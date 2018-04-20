@@ -26,12 +26,14 @@ class MainView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
+        let navigation_view = SwDateNaview.init(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 64))
+        self .addSubview(navigation_view)
         self.add_news_tableview()
     }
     
     
     func add_news_tableview() {
-        news_table = UITableView.init(frame: CGRect.init(x: 0, y: 120, width: kScreenWidth, height: kScreenHeight - 120), style: UITableViewStyle.grouped)
+        news_table = UITableView.init(frame: CGRect.init(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight - 120), style: UITableViewStyle.plain)
         self .addSubview(news_table!)
     }
     

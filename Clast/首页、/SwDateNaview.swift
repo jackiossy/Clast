@@ -37,12 +37,13 @@ class SwDateNaview: UIView {
     
     func add_date_view() {
         date_view = UIView.init(frame: CGRect.init(x: 0, y: 0, width:kScreenWidth, height: 120))
-        date_view?.backgroundColor = UIColor .white
+        date_view?.backgroundColor = UIColor(red: 57/255.0, green: 67/255.0, blue: 89/255.0, alpha: 1.0)
         self.addSubview(date_view!)
         
-        week_text = UILabel.init(frame: CGRect.init(x: 0, y: 20, width: kScreenWidth, height: 60))
-        week_text?.text = "  TUESDAY,"
-        week_text?.font = UIFont.boldSystemFont(ofSize: 32)
+        week_text = UILabel.init(frame: CGRect.init(x: 0, y: 10, width: kScreenWidth, height: 60))
+        week_text?.text = "  快科技"
+        week_text?.font = UIFont.boldSystemFont(ofSize: 26)
+        week_text?.textColor = UIColor .white
         date_view?.addSubview(week_text!)
         
         date_text = UILabel.init(frame: CGRect.init(x: 0, y: 60, width: kScreenWidth, height: 60))

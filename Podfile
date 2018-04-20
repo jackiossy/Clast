@@ -6,4 +6,5 @@ target 'Clast' do
     pod 'Alamofire', '~> 4.3.0'
     pod 'Kingfisher', '~> 4.7.0'
     pod 'SnapKit', '~> 4.0.0'
+    pod 'DGElasticPullToRefresh', '~> 1.1'
 end
