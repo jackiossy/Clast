@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // Initialize tableView
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0)
+        loadingView.tintColor = UIColor.white
         main_view?.news_table?.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             // Add your logic here
             self?.loadAllData()
