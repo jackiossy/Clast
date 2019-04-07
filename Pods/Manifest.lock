@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.8.1)
+  - CZXRefresh (0.1.0)
+  - Kingfisher (5.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.1)
+  - CZXRefresh (~> 0.1.0)
+  - Kingfisher (~> 5.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CZXRefresh
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  CZXRefresh: 29cac6c9e77ee0ef96341288bfac063577e43209
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+
+PODFILE CHECKSUM: 3b38daae036e6e71f0d2d54b6047fbf1a374f983
+
+COCOAPODS: 1.6.1
